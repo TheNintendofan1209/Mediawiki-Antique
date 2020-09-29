@@ -1,0 +1,62 @@
+{
+	"name": "Antique",
+	"version": "1.0",
+	"author": "...",
+	"url": "https://mike9012.xyz",
+	"descriptionmsg": "antique-desc",
+	"namemsg": "skinname-antique",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"ValidSkinNames": {
+		"antique": "Antique"
+	},
+	"MessagesDirs": {
+		"Antique": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.antique": {
+			"class": "ResourceLoaderSkinModule",
+			"styles": {
+				"resources/libraries/normalise.css": {
+					"media": "screen"
+				},
+				"resources/screen-common.less": {
+					"media": "screen"
+				},
+				"resources/screen-desktop.less": {
+					"media": "screen and (min-width: 751px)"
+				},
+				"resources/screen-mobile.less": {
+					"media": "screen and (max-width: 750px)"
+				},
+				"resources/print.css": {
+					"media": "print"
+				}
+			}
+		},
+		"skins.antique.js": {
+			"scripts": [
+				"resources/main.js"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Antique"
+	},
+	"ResourceModuleSkinStyles": {
+		"antique": {
+			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
+		}
+	},
+	"AutoloadClasses": {
+		"SkinAntique": "includes/SkinAntique.php",
+		"AntiqueTemplate": "includes/AntiqueTemplate.php"
+	},
+	"manifest_version": 1
+}
