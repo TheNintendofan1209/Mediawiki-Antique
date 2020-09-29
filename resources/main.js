@@ -1,1 +1,1 @@
-/* JavaScript for the Antique skin */
+/* JavaScript for the Chick skin */
