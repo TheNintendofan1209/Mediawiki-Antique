@@ -1,5 +1,10 @@
-Antique skin
+Chick skin
 
-This is an antique skin.
+This is a revival of former MediaWiki skin Using modern codebade that is for PDAs and other mobile devices.
 
 The code is released into GPL 2.0 or later  (http://www.gnu.org/copyleft/gpl.html).
+
+How to install
+Unzip the content to (your wiki)/skins
+Rename the Chick-Mediawiki-master to Chick
+Put wfLoadSkin( 'Chick' ); into Localsettings.php
