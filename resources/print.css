@@ -1,368 +1,188 @@
-/*
-** MediaWiki 'chick' style sheet for PDAs or other small-screen devices.
-** Copyright Timwi
-** License: GPL 2.0 or later (http://www.gnu.org/copyleft/gpl.html)
-**
-** Loosely based on Monobook by Gabriel Wicke
-*/
+/**
+ * This style sheet is used by the Antique skin
+ */
 
-body {
-	font-family: sans-serif;
-	color: black;
-	background: white;
-	margin: 0;
-	padding: 0.3em;
+#article {
+	padding: 4px;
 }
 
-a { color: #002bb8; }
-a:visited { color: #5a3696; }
-a:active { color: #ffa500; }
-a.stub { color: #772233; }
-a.new,
-#p-personal a.new { color:#ba0000; }
-a.new:visited,
-#p-personal a.new:visited { color:#a55858; }
-
-img {
-	border: none;
-	vertical-align: middle;
-}
-p {
-	margin: 0.4em 0em 0.5em 0em;
-	line-height: 1.5em;
-}
-
-p img { margin: 0; }
-
-hr {
-	height: 1px;
-	color: #aaaaaa;
-	background-color: #aaaaaa;
-	border: 0;
-	margin: 0.2em 0 0.2em 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	color: black;
-	background: none;
-	font-weight: normal;
-	margin: 0;
-	overflow: hidden;
-	padding-top: 0.5em;
-	padding-bottom: 0.17em;
-	border-bottom: 1px solid #aaaaaa;
-}
-.editsection {
-	font-weight: normal;
-}
-h1 { font-size: 188%; }
-h1 .editsection { font-size: 53.2%; }
-h2 { font-size: 150%; }
-h2 .editsection { font-size: 66.7%; }
-h3, h4, h5, h6 {
-	border-bottom: none;
-	font-weight: bold;
-}
-h3 { font-size: 132%; }
-h3 .editsection { font-size: 75.8%; }
-h4 { font-size: 116%; }
-h4 .editsection { font-size: 86.2%; }
-h5 { font-size: 100%; }
-h6 { font-size: 80%;  }
-h6 .editsection { font-size: 125%; }
-
-ul {
-	line-height: 1.5em;
-	margin: 0.3em 0 0 1.5em;
-	padding:0;
-}
-ol {
-	line-height: 1.5em;
-	margin: 0.3em 0 0 3.2em;
-	padding:0;
-	list-style-image: none;
-}
-li { margin-bottom: 0.1em; }
-dt {
-	font-weight: bold;
-	margin-bottom: 0.1em;
-}
-dl{
-	margin-top: 0.2em;
-	margin-bottom: 0.5em;
-}
-dd {
-	line-height: 1.5em;
-	margin-left: 2em;
-	margin-bottom: 0.1em;
-}
-
-fieldset {
-	border: 1px solid #2f6fab;
-	margin: 1em 0em 1em 0em;
-	padding: 0em 1em 1em 1em;
-	line-height: 1.5em;
-}
-legend {
-	background: white;
-	padding: 0.5em;
-	font-size: 95%;
-}
-form {
-	border: none;
-	margin: 0;
-}
-
-textarea {
-	border: 1px solid #2f6fab;
-	color: black;
-	background-color: white;
-	width: 100%;
-	padding: 0.1em;
-	overflow: auto;
-}
-/* hide this from ie/mac and konq2.2 */
-@media All {
-	head:first-child+body input {
-		visibility: visible;
-		border: 1px solid #2f6fab;
-		color: black;
-		background-color: white;
-		vertical-align: middle;
-		padding: 0.2em;
-	}
-}
-input.historysubmit {
-	padding: 0 0.3em 0.3em 0.3em !important;
-	font-size: 94%;
-	cursor: pointer;
-	height: 1.7em !important;
-	margin-left: 1.6em;
-}
-input[type="radio"],
-input[type="checkbox"] { border:none; }
-select {
-	border: 1px solid #2f6fab;
-	color: black;
-	vertical-align: top;
-}
-q {
-	font-family: Times, "Times New Roman", serif;
-	font-style: italic;
-}
-code { background-color: #f9f9f9; }
-pre, .mw-code {
-	padding: 1em;
-	border: 1px dashed #2f6fab;
-	color: black;
-	background-color: #f9f9f9;
-	line-height: 1.1em;
-}
-
-/*
-** the main content area
-*/
-
-span.subpages { display: block; }
-
-/* Some space under the headers in the content area */
-#bodyContent h1, #bodyContent h2 { margin-bottom:0.6em; }
-#bodyContent h3,
-#bodyContent h4,
-#bodyContent h5 {
-	margin-bottom: 0.3em;
-}
-#firstHeading { margin-bottom:0.1em; }
-
-/* user notification thing */
-.usermessage {
-	background-color: #ffce7b;
-	border: 1px solid #ffa500;
-	color: black;
-	font-weight: bold;
-	margin: 0.1em 0 0 0;
-	padding: 2px 5px;
-	vertical-align: middle;
-}
-#siteNotice {
-	text-align: center;
-	font-size: 95%;
-	padding: 0 0.9em 0 0.9em;
-}
-#siteNotice p { margin: 0; padding: 0; }
-.error {
-	color: red;
-	font-size: larger;
-}
-.catlinks {
-	border:1px solid #aaaaaa;
-	background-color:#f9f9f9;
-	padding: 2px 5px;
-	margin: 0.1em 0 0 0;
-	clear: both;
-}
-.catlinks { margin: 0; padding: 0; }
-
-/* emulate center */
-.center {
-	width: 100%;
-	text-align: center;
-}
-*.center * {
-	margin-left: auto;
-	margin-right: auto;
-}
-/* small for tables and similar */
-.small { font-size: 94%; }
-table.small { font-size: 100% }
-
-/*
-** content styles
-*/
-
-#toc {
-	/*border:1px solid #2f6fab;*/
-	border:1px solid #aaaaaa;
-	background-color:#f9f9f9;
-	padding:5px;
-	font-size: 95%;
-}
-#toc ul { margin: 0 2em; }
-#toc .toctoggle { font-size: 94%; }
-#toc .editsection {
-	margin-top: 0.7em;
-	font-size: 94%;
-}
-
-/* images */
-/* @noflip */div.floatright, table.floatright {
-	margin: 0;
-	border: 0.5em solid white;
-	border-width: 0.5em 0 0.8em 1.4em;
-}
-div.floatright p { font-style: italic; }
-/* @noflip */div.floatleft, table.floatleft {
-	margin: 0.3em 0.5em 0.5em 0;
-	border: 0.5em solid white;
-	border-width: 0.5em 1.4em 0.8em 0;
-}
-div.floatleft p { font-style: italic; }
-/* thumbnails */
-div.thumb {
-	margin-bottom: 0.5em;
-	width: auto;
-}
-div.thumbinner {
-	border:1px solid #cccccc;
-	padding: 3px !important;
-	background-color:#f9f9f9;
-	font-size: 94%;
-	text-align: center;
-	overflow: hidden;
-}
-html .thumbimage {
-	border:1px solid #cccccc;
-}
-html .thumbcaption {
-	border: none;
-	text-align: left;
-	line-height: 1.4em;
-	padding: 0.3em 0 0.1em 0;
-}
-div.magnify {
-	float: right;
-	border: none !important;
-	background: none !important;
-}
-div.magnify a, div.magnify img {
-	display: block;
-	border: none !important;
-	background: none !important;
-}
-/* @noflip */div.tright {
-	margin: 0.5em 0 1.3em 1.4em;
-}
-/* @noflip */div.tleft {
-	margin: 0.5em 1.4em 1.3em 0;
-}
-img.thumbborder {
-	border: 1px solid #dddddd;
-}
-
-/*
-** classes for special content elements like town boxes
-** intended to be referenced directly from the wiki src
-*/
-
-/*
-** User styles
-*/
-/* table standards */
-table.rimage {
-	float:right;
-	position:relative;
-	margin-left:1em;
-	margin-bottom:1em;
-	text-align:center;
-}
-.toccolours {
-	border:1px solid #aaaaaa;
-	background-color:#f9f9f9;
-	padding:5px;
-	font-size: 95%;
-}
-
-/*
-** edit views etc
-*/
-.special li {
-	line-height: 1.4em;
+#content {
 	margin: 0;
 	padding: 0;
 }
 
-a.external { color: #3366bb; }
-div#footer { text-align: center; }
-ul#f-list li { list-style: none;  text-align: center; }
-div.portlet { margin: 0.5em 0; }
-
-.redirectText {
-	font-size:150%;
-	margin:5px;
-}
-
-ul.special li.not-patrolled, ol.special li.not-patrolled {
-	background-color: #ffa;
-}
-div.patrollink {
-	font-size: 75%;
-	text-align: right;
-}
-
-span.updatedmarker {
-	color:black;
-	background-color:#00FF00;
-}
-
-div.gallerybox {
-	width:  150px;
-}
-
-#xjump-to-nav {
-	display: none;
-}
-
-.templatesUsed { margin-top: 1.5em; }
-
 #footer {
-	background-color: white;
-	border-top: 1px solid #fabd23;
-	border-bottom: 1px solid #fabd23;
-	margin: .6em 0 1em 0;
-	padding: .4em 0 1.2em 0;
-	text-align: center;
-	font-size: 90%;
+	padding: 4px;
+	font-size: 95%;
+	clear: both;
 }
-#f-poweredbyico, #f-copyrightico {
+
+#pagestats {
+	font-size: 9pt;
+}
+
+#powersearch {
+	background: #DDEEFF;
+	border-style: solid;
+	border-width: 1px;
+	padding: 2px;
+}
+
+#quickbar {
+	width: 140px;
+	height: 100%;
+	padding: 4px;
+	visibility: visible;
+	z-index: 99;
+	font-size: 95%;
+}
+
+#topbar {
+	padding: 4px;
+	font-size: 95%;
+}
+
+/* Table of contents */
+.toctoggle,
+.editsection {
+	font-size: smaller;
+}
+
+/* ... */
+#toolbar {
+	padding: 0;
+}
+
+#infobox {
+	background: #eeeeff;
+	color: black;
+}
+
+#editform {
+	margin-top: 1px;
+}
+
+a.interwiki,
+a.external {
+	color: #3366BB;
+}
+
+a.printable {
+	text-decoration: underline;
+}
+
+a.new {
+	color: #ba0000;
+}
+
+a.stub {
+	color: #772233;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #5A3696;
+}
+
+body {
+	margin: 0;
+	padding: 4px;
+	color: black;
+}
+
+form.inline {
 	display: inline;
+}
+
+textarea {
+	overflow: auto;
+}
+
+h1.pagetitle {
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	font-size: 150%;
+}
+
+h1.pagetitle .editsection {
+	font-size: 66.7%;
+}
+
+h2 {
+	font-size: 120%;
+}
+
+h2 .editsection {
+	font-size: 83.3%;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-bottom: 0;
+}
+
+h3 {
+	font-size: 106.25%;
+}
+
+h3 .editsection {
+	font-size: 94.1%;
+}
+
+h4 {
+	font-size: 103.125%;
+}
+
+h4 .editsection {
+	font-size: 97.0%;
+}
+
+h5 {
+	font-size: 100%;
+}
+
+h5 .editsection {
+	font-size: 100%;
+}
+
+h6 {
+	font-size: 95%;
+}
+
+h6 .editsection {
+	font-size: 105.3%;
+}
+
+hr.sep {
+	color: gray;
+	height: 1px;
+	background-color: gray;
+}
+
+p.subpages {
+	font-size: small;
+}
+
+p.subtitle {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.catlinks {
+	font-size: small;
+	margin-top: 0;
+	text-align:right;
+}
+
+td {
+	empty-cells: show;
+}
+
+td.bottom {
+	border-top: 1px solid gray;
+}
+
+td.top {
+	border-bottom: 1px solid gray;
 }

@@ -1,272 +1,327 @@
-/*
-** MediaWiki 'chick' style sheet for PDAs or other small-screen devices.
-** Copyright Timwi
-** License: GPL 2.0 or later (http://www.gnu.org/copyleft/gpl.html)
-**
-** Loosely based on Monobook by Gabriel Wicke
-*/
+/**
+ * For clarity, explicitly state some recommendations from
+ * http://www.w3.org/TR/CSS21/sample.html to make sure the editsection links scale right.
+ */
 
-body {
-	font-family: sans-serif;
-	color: black;
-	background: white;
-	margin: 0;
-	padding: 0.3em;
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.17em;
+}
+h5 {
+	font-size: .83em;
+}
+h6 {
+	font-size: .75em;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bolder;
 }
 
-a { color: #002bb8; }
-a:visited { color: #5a3696; }
-a:active { color: #ffa500; }
-a.stub { color: #772233; }
-a.new,
-#p-personal a.new { color:#ba0000; }
-a.new:visited,
-#p-personal a.new:visited { color:#a55858; }
+/* Now the custom parts */
+
+/* Make edit sections (which are inside h# tags) normal-sized */
+.editsection {
+	font-weight: normal;
+}
+h1 .editsection {
+	font-size: 50%;
+}
+h2 .editsection {
+	font-size: 66.7%;
+}
+h3 .editsection {
+	font-size: 85.5%;
+}
+h5 .editsection {
+	font-size: 120%;
+}
+h6 .editsection {
+	font-size: 133%;
+}
+
+#toolbar {
+	display: none;
+}
+
+div.center {
+	text-align: center;
+}
+
+#contentSub {
+	padding-left: 2em;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#column-content {
+	width: 100%;
+	float: right;
+	margin: 0 0 0.6em -12.2em;
+	padding: 0;
+}
+
+#content {
+	margin: 0em 0 0 12.2em;
+	padding: 0em 1em 1.5em 1em;
+	border-left: 1px solid #959595;
+	line-height: 1.5em;
+}
+
+#column-one {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Hide, but keep accessible for screen-readers */
+#column-one h2 {
+	position: absolute;
+	top: -9999px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#globalWrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.visualClear {
+	clear: both;
+}
 
 img {
 	border: none;
-	vertical-align: middle;
 }
 p {
 	margin: 0.4em 0em 0.5em 0em;
 	line-height: 1.5em;
 }
-
-p img { margin: 0; }
-
-hr {
-	height: 1px;
-	color: #aaaaaa;
-	background-color: #aaaaaa;
-	border: 0;
-	margin: 0.2em 0 0.2em 0;
+p img {
+	margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: black;
-	background: none;
-	font-weight: normal;
 	margin: 0;
-	overflow: hidden;
 	padding-top: 0.5em;
 	padding-bottom: 0.17em;
-	border-bottom: 1px solid #aaaaaa;
 }
-.editsection {
-	font-weight: normal;
-}
-h1 { font-size: 188%; }
-h1 .editsection { font-size: 53.2%; }
-h2 { font-size: 150%; }
-h2 .editsection { font-size: 66.7%; }
-h3, h4, h5, h6 {
-	border-bottom: none;
-	font-weight: bold;
-}
-h3 { font-size: 132%; }
-h3 .editsection { font-size: 75.8%; }
-h4 { font-size: 116%; }
-h4 .editsection { font-size: 86.2%; }
-h5 { font-size: 100%; }
-h6 { font-size: 80%;  }
-h6 .editsection { font-size: 125%; }
-
-ul {
-	line-height: 1.5em;
-	margin: 0.3em 0 0 1.5em;
-	padding:0;
-}
-ol {
-	line-height: 1.5em;
-	margin: 0.3em 0 0 3.2em;
-	padding:0;
-	list-style-image: none;
-}
-li { margin-bottom: 0.1em; }
-dt {
-	font-weight: bold;
-	margin-bottom: 0.1em;
-}
-dl{
-	margin-top: 0.2em;
-	margin-bottom: 0.5em;
-}
-dd {
-	line-height: 1.5em;
-	margin-left: 2em;
-	margin-bottom: 0.1em;
-}
-
 fieldset {
-	border: 1px solid #2f6fab;
 	margin: 1em 0em 1em 0em;
 	padding: 0em 1em 1em 1em;
-	line-height: 1.5em;
 }
-legend {
-	background: white;
-	padding: 0.5em;
-	font-size: 95%;
-}
-form {
-	border: none;
-	margin: 0;
-}
-
-textarea {
-	border: 1px solid #2f6fab;
-	color: black;
-	background-color: white;
-	width: 100%;
-	padding: 0.1em;
-	overflow: auto;
-}
-/* hide this from ie/mac and konq2.2 */
-@media All {
-	head:first-child+body input {
-		visibility: visible;
-		border: 1px solid #2f6fab;
-		color: black;
-		background-color: white;
-		vertical-align: middle;
-		padding: 0.2em;
-	}
-}
-input.historysubmit {
-	padding: 0 0.3em 0.3em 0.3em !important;
-	font-size: 94%;
-	cursor: pointer;
-	height: 1.7em !important;
-	margin-left: 1.6em;
-}
-input[type="radio"],
-input[type="checkbox"] { border:none; }
-select {
-	border: 1px solid #2f6fab;
-	color: black;
-	vertical-align: top;
-}
-q {
-	font-family: Times, "Times New Roman", serif;
-	font-style: italic;
-}
-code { background-color: #f9f9f9; }
-pre, .mw-code {
-	padding: 1em;
-	border: 1px dashed #2f6fab;
-	color: black;
-	background-color: #f9f9f9;
-	line-height: 1.1em;
-}
-
-/*
-** the main content area
-*/
-
-span.subpages { display: block; }
-
-/* Some space under the headers in the content area */
-#bodyContent h1, #bodyContent h2 { margin-bottom:0.6em; }
-#bodyContent h3,
-#bodyContent h4,
-#bodyContent h5 {
-	margin-bottom: 0.3em;
-}
-#firstHeading { margin-bottom:0.1em; }
-
-/* user notification thing */
 .usermessage {
 	background-color: #ffce7b;
 	border: 1px solid #ffa500;
 	color: black;
 	font-weight: bold;
-	margin: 0.1em 0 0 0;
-	padding: 2px 5px;
+	margin: 2em 0em 1em 0em;
+	padding: 0.5em 1em;
 	vertical-align: middle;
 }
-#siteNotice {
-	text-align: center;
-	font-size: 95%;
-	padding: 0 0.9em 0 0.9em;
-}
-#siteNotice p { margin: 0; padding: 0; }
 .error {
 	color: red;
 	font-size: larger;
 }
-.catlinks {
-	border:1px solid #aaaaaa;
-	background-color:#f9f9f9;
-	padding: 2px 5px;
-	margin: 0.1em 0 0 0;
-	clear: both;
-}
-.catlinks { margin: 0; padding: 0; }
 
-/* emulate center */
-.center {
-	width: 100%;
+table.rimage {
+	float: right;
+	position: relative;
+	margin-left: 1em;
+	margin-bottom: 1em;
 	text-align: center;
 }
-*.center * {
-	margin-left: auto;
-	margin-right: auto;
+
+.portlet {
+	border: none;
+	float: none;
+	padding: 0;
+	width: 11.8em;
+	overflow: hidden;
 }
-/* small for tables and similar */
-.small { font-size: 94%; }
-table.small { font-size: 100% }
+.portlet h4 {
+	font-weight: normal;
+	white-space: nowrap;
+}
+.portlet h5 {
+	padding: 0em 1em 0em 0.5em;
+	display: inline;
+	height: 1em;
+	font-weight: normal;
+	white-space: nowrap;
+}
+.portlet h6 {
+	padding: 0em 1em 0em 1em;
+	display: block;
+	height: 1.2em;
+	font-weight: normal;
+	white-space: nowrap;
+}
+.pBody {
+	border-collapse: collapse;
+	padding: 0 0.8em 0.3em 0.5em;
+}
+.portlet h1,
+.portlet h2,
+.portlet h3,
+.portlet h4 {
+	margin: 0;
+	padding: 0;
+	font-size: small;
+}
 
-/*
-** content styles
-*/
+#p-search .pBody {
+	text-align: center;
+}
 
+#searchInput {
+	width: 100%;
+	clear: both;
+	margin: 0 0 0 0;
+}
+
+input.searchButton {
+	margin-top: 1px;
+	padding: 0 0.4em;
+	cursor: pointer;
+}
+
+#p-search .pBody {
+	padding: 0.5em 0.4em 0.4em 0.4em;
+}
+
+/* feed links */
+a.feedlink {
+	background: url(resources/images/feed-icon.png) center left no-repeat;
+	padding-left: 16px;
+}
+
+textarea {
+	width: 100%;
+}
+
+.pBody li,
+.pBody ul {
+	padding-left: 0em;
+	margin-left: 0.5em;
+}
+
+pre, .mw-code {
+	margin: 2em;
+	border: solid 1px black;
+}
+
+h1.firstHeading,
+h2 {
+	border-bottom: solid 1px black;
+}
+#bodyContent a.external,
+#bodyContent a.external[href ^="gopher://"] {
+	background: url(resources/images/external.png) center right no-repeat;
+	padding-right: 13px;
+}
+#bodyContent a.external[href ^="https://"],
+.link-https {
+	background: url(resources/images/lock_icon.gif) center right no-repeat;
+	padding-right: 16px;
+}
+#bodyContent a.external[href ^="mailto:"],
+.link-mailto {
+	background: url(resources/images/mail_icon.gif) center right no-repeat;
+	padding-right: 18px;
+}
+#bodyContent a.external[href ^="news:"] {
+	background: url(resources/images/news_icon.png) center right no-repeat;
+	padding-right: 18px;
+}
+#bodyContent a.external[href ^="ftp://"],
+.link-ftp {
+	background: url(file_icon.gif) center right no-repeat;
+	padding-right: 18px;
+}
+#bodyContent a.external[href ^="irc://"],
+#bodyContent a.external[href ^="ircs://"],
+.link-irc {
+	background: url(discussionitem_icon.gif) center right no-repeat;
+	padding-right: 18px;
+}
+
+#bodyContent a.extiw,
+#bodyContent a.extiw:active {
+	color: #5E7CFF;
+}
+
+td.diff-addedline {
+	background-color: #B9FFB0;
+}
+
+td.diff-deletedline {
+	background-color: #f8ffaa;
+}
+
+.diffchange {
+	background-color: #FFCDF3;
+	text-decoration: none;
+}
+
+#pagehistory li {
+	border: none;
+}
+
+div.tocindent {
+	margin-left: 2em;
+}
 #toc {
-	/*border:1px solid #2f6fab;*/
-	border:1px solid #aaaaaa;
-	background-color:#f9f9f9;
-	padding:5px;
-	font-size: 95%;
-}
-#toc ul { margin: 0 2em; }
-#toc .toctoggle { font-size: 94%; }
-#toc .editsection {
-	margin-top: 0.7em;
-	font-size: 94%;
+	text-align: left;
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
 }
 
-/* images */
 /* @noflip */div.floatright, table.floatright {
 	margin: 0;
-	border: 0.5em solid white;
 	border-width: 0.5em 0 0.8em 1.4em;
 }
-div.floatright p { font-style: italic; }
+div.floatright p {
+	font-style: italic;
+}
 /* @noflip */div.floatleft, table.floatleft {
 	margin: 0.3em 0.5em 0.5em 0;
-	border: 0.5em solid white;
 	border-width: 0.5em 1.4em 0.8em 0;
 }
-div.floatleft p { font-style: italic; }
+div.floatleft p {
+	font-style: italic;
+}
+
 /* thumbnails */
 div.thumb {
 	margin-bottom: 0.5em;
 	width: auto;
 }
 div.thumbinner {
-	border:1px solid #cccccc;
 	padding: 3px !important;
-	background-color:#f9f9f9;
-	font-size: 94%;
 	text-align: center;
 	overflow: hidden;
 }
-html .thumbimage {
-	border:1px solid #cccccc;
-}
+
 html .thumbcaption {
 	border: none;
 	text-align: left;
-	line-height: 1.4em;
+	line-height: 1.4;
 	padding: 0.3em 0 0.1em 0;
 }
 div.magnify {
@@ -274,95 +329,99 @@ div.magnify {
 	border: none !important;
 	background: none !important;
 }
-div.magnify a, div.magnify img {
+div.magnify a,
+div.magnify img {
 	display: block;
 	border: none !important;
 	background: none !important;
 }
 /* @noflip */div.tright {
-	margin: 0.5em 0 1.3em 1.4em;
+	border-width: 0.5em 0 0.8em 1.4em;
 }
 /* @noflip */div.tleft {
-	margin: 0.5em 1.4em 1.3em 0;
+	margin-right: 0.5em;
+	border-width: 0.5em 1.4em 0.8em 0;
 }
 img.thumbborder {
 	border: 1px solid #dddddd;
 }
 
-/*
-** classes for special content elements like town boxes
-** intended to be referenced directly from the wiki src
-*/
-
-/*
-** User styles
-*/
-/* table standards */
-table.rimage {
-	float:right;
-	position:relative;
-	margin-left:1em;
-	margin-bottom:1em;
-	text-align:center;
+a.stub {
+	color: #772233;
 }
-.toccolours {
-	border:1px solid #aaaaaa;
-	background-color:#f9f9f9;
-	padding:5px;
-	font-size: 95%;
+a.new,
+#p-personal a.new {
+	color: #BA0000;
+	text-decoration: line-through;
 }
-
-/*
-** edit views etc
-*/
-.special li {
-	line-height: 1.4em;
-	margin: 0;
-	padding: 0;
+li.new {
+	text-decoration: line-through;
+}
+/**
+ * Overrides text justification (user preference)
+ * See bug 31990
+ */
+#catlinks {
+	text-align: center;
+}
+.catlinks {
+	text-align: center;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3px;
 }
 
-a.external { color: #3366bb; }
-div#footer { text-align: center; }
-ul#f-list li { list-style: none;  text-align: center; }
-div.portlet { margin: 0.5em 0; }
-
-.redirectText {
-	font-size:150%;
-	margin:5px;
+#mytabs {
+	background-color: inherit;
+}
+#p-cactions {
+	background-color: inherit;
 }
 
-ul.special li.not-patrolled, ol.special li.not-patrolled {
-	background-color: #ffa;
-}
-div.patrollink {
-	font-size: 75%;
-	text-align: right;
+#footer {
+	padding-left: 11.8em;
 }
 
-span.updatedmarker {
-	color:black;
-	background-color:#00FF00;
-}
-
-div.gallerybox {
-	width:  150px;
-}
-
-#xjump-to-nav {
+#n-portal,
+#n-currentevents,
+#n-help,
+#n-sitesupport {
 	display: none;
 }
 
-.templatesUsed { margin-top: 1.5em; }
+#preftoc {
+	float: left;
+	margin: 1em;
+	width: 13em;
+}
+#preftoc li {
+}
+#preftoc li.selected {
+	border: 1px dashed #aaa;
+}
+#preftoc a,
+#preftoc a:active {
+	display: block;
+}
+div.htmlform-tip {
+	font-size: 95%;
+	margin-top: 1em;
+}
 
-#footer {
-	background-color: white;
-	border-top: 1px solid #fabd23;
-	border-bottom: 1px solid #fabd23;
-	margin: .6em 0 1em 0;
-	padding: .4em 0 1.2em 0;
-	text-align: center;
-	font-size: 90%;
+#mw_trackbacks {
+	border-style: groove;
 }
-#f-poweredbyico, #f-copyrightico {
-	display: inline;
+
+#jump-to-nav {
+	display: none;
 }
+
+table.collapsed tr.collapsable {
+	display: none;
+}
+
+.templatesUsed {
+	margin-top: 1.5em;
+}
+

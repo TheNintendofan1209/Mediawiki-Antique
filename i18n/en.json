@@ -1,7 +1,7 @@
 {
 	"@metadata": {
-		"authors": [ "Timwi and Mike9012" ]
+		"authors": [ "Mike9012" ]
 	},
-	"skinname-chick": "chick",
-	"chick-desc": "A revival of former MediaWiki skin Using modern codebade that is for PDAs and other mobile devices"
+	"skinname-antique": "Example",
+	"antique-desc": "An antique skin"
 }

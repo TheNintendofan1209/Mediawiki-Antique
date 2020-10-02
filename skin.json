@@ -1,53 +1,30 @@
 {
-	"name": "Chick",
+	"name": "Antique",
 	"version": "1.0",
-	"author": "Timwi and Mike9012",
-	"url": "https://github.com/TheNintendofan1209/Chick-Mediawiki",
-	"descriptionmsg": "chick-desc",
-	"namemsg": "skinname-chick",
+	"author": "...",
+	"url": "https://mike9012.xyz",
+	"descriptionmsg": "antique-desc",
+	"namemsg": "skinname-antique",
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.29.0"
 	},
 	"ValidSkinNames": {
-		"chick": {
-			"class": "SkinChick",
-			"args": [ {
-				"name": "chick",
-				"responsive": true,
-				"templateDirectory": "skins/Chick/templates",
-				"styles": [
-					"skins.chick"
-				],
-				"messages": [
-					"sitetitle",
-					"search",
-					"tagline",
-					"navigation-heading"
-				],
-				"scripts": [
-					"skins.chick.js"
-				]
-			} ]
-		}
+		"antique": "Antique"
 	},
 	"MessagesDirs": {
-		"Chick": [
+		"Antique": [
 			"i18n"
 		]
 	},
 	"ResourceModules": {
-		"skins.chick": {
+		"skins.antique": {
 			"class": "ResourceLoaderSkinModule",
-			"features": [
-				"normalize",
-				"elements",
-				"content",
-				"interface",
-				"logo"
-			],
 			"styles": {
+				"resources/libraries/normalise.css": {
+					"media": "screen"
+				},
 				"resources/screen-common.less": {
 					"media": "screen"
 				},
@@ -62,7 +39,7 @@
 				}
 			}
 		},
-		"skins.chick.js": {
+		"skins.antique.js": {
 			"scripts": [
 				"resources/main.js"
 			]
@@ -70,16 +47,16 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "Chick"
+		"remoteSkinPath": "Antique"
 	},
 	"ResourceModuleSkinStyles": {
-		"chick": {
+		"antique": {
 			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
 		}
 	},
 	"AutoloadClasses": {
-		"SkinChick": "includes/SkinChick.php",
-		"ChickTemplate": "includes/ChickTemplate.php"
+		"SkinAntique": "includes/SkinAntique.php",
+		"AntiqueTemplate": "includes/AntiqueTemplate.php"
 	},
 	"manifest_version": 1
 }
