@@ -1,7 +1,7 @@
 {
 	"@metadata": {
-		"authors": [ "Mike9012" ]
+		"authors": [ "Timwi and Mike9012" ]
 	},
-	"skinname-antique": "{{optional}}",
-	"antique-desc": "{{desc|what=skin|name=Antique|url=https://mike9012.xyz}}"
+	"skinname-chick": "{{optional}}",
+	"chick-desc": "{{desc|what=skin|name=Chick|url=https://www.mediawiki.org/wiki/Skin:Chick}}"
 }
